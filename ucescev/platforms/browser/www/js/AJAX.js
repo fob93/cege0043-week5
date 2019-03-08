@@ -2,6 +2,7 @@ var xhrNode; //define global variable to process AJAX request
 
 // AJAX request function
 function callDivNodeJSChange(){
+	alert ("alert1");
 	xhrNode = new XMLHttpRequest();
 	var url = "http://developer.cege.ucl.ac.uk:" + httpPortNumber; //get url with non-hardcoded port number
 	xhrNode.open("GET", url, true); // send to server
@@ -16,7 +17,7 @@ function callDivNodeJSChange(){
 }
 
 // AJAX response function
-function processDivNodeJSChange(){
+function processDivNodeJSChange{
 	if (xhrNode.readyState < 4) //while waiting for response from server
 		document.getElementById('ajaxtext').innerHTML = "Loading...";
 	else if (xhrNode.readyState === 4) { // 4 = response from server completely loaded
@@ -25,3 +26,4 @@ function processDivNodeJSChange(){
 			document.getElementById('ajaxtext').innerHTML = xhrNode.responseText;
 	}
 }
+
